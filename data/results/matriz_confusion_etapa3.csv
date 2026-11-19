@@ -1,0 +1,3 @@
+modelo,verdaderos_negativos,falsos_positivos,falsos_negativos,verdaderos_positivos,total_evaluados
+Regresion Logistica,101,235,88,327,751
+Random Forest,101,235,200,215,751

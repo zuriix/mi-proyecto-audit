@@ -1,0 +1,120 @@
+{
+  "fecha_ejecucion": "2026-10-15T02:58:38.263074+00:00",
+  "proyecto": "OSS Guard",
+  "etapa": "Etapa 3 - Cierre Tecnico",
+  "estrategia_particion": "Group Split por paquete (0 solapamiento entre particiones)",
+  "particiones": {
+    "train": {
+      "ruta": "data\\processed\\train.csv",
+      "filas": 2255,
+      "paquetes_unicos": 24,
+      "sha256": "cdcff9adf7a7dbeb1b6bc0b814048591208803767f1ea7ca26322388a6b549a8",
+      "distribucion_clases": {
+        "clase_0_sin_riesgo": 1013,
+        "clase_1_con_riesgo": 1242,
+        "total": 2255,
+        "paquetes_unicos": 24,
+        "nulos_totales": 0,
+        "duplicados_completos": 0,
+        "duplicados_paquete_version": 0
+      }
+    },
+    "validation": {
+      "ruta": "data\\processed\\validation.csv",
+      "filas": 738,
+      "paquetes_unicos": 12,
+      "sha256": "84619ce5ebe0242ae8743cab9503a8b22cf7a0516379cf6a7fb5446705d42768",
+      "distribucion_clases": {
+        "clase_0_sin_riesgo": 332,
+        "clase_1_con_riesgo": 406,
+        "total": 738,
+        "paquetes_unicos": 12,
+        "nulos_totales": 0,
+        "duplicados_completos": 0,
+        "duplicados_paquete_version": 0
+      }
+    },
+    "test": {
+      "ruta": "data\\processed\\test.csv",
+      "filas": 751,
+      "paquetes_unicos": 11,
+      "sha256": "2887b0e34b033a267ec5f66bad97a284dbb030d167099a3f5af8c081d4b3b6f0",
+      "distribucion_clases": {
+        "clase_0_sin_riesgo": 336,
+        "clase_1_con_riesgo": 415,
+        "total": 751,
+        "paquetes_unicos": 11,
+        "nulos_totales": 0,
+        "duplicados_completos": 0,
+        "duplicados_paquete_version": 0
+      }
+    },
+    "train_final_combinado": {
+      "filas": 2993,
+      "paquetes_unicos": 36,
+      "descripcion": "train.csv + validation.csv segun protocolo para ajustar el modelo seleccionado en validacion"
+    }
+  },
+  "modelo_seleccionado": {
+    "algoritmo": "LogisticRegression",
+    "regla_seleccion": "Mayor F1-score en validation (0.7459) con alto Recall (83.50%)",
+    "semilla": 42,
+    "hiperparametros": {
+      "max_iter": 2000,
+      "random_state": 42
+    },
+    "caracteristicas_utilizadas": [
+      "edad_version_dias",
+      "versiones_anteriores",
+      "numero_dependencias",
+      "numero_dependencias_opcionales",
+      "numero_scripts",
+      "tiene_repositorio",
+      "tiene_licencia"
+    ],
+    "variable_objetivo": "riesgo",
+    "umbral_decision": 0.5
+  },
+  "resultados_test_modelo_seleccionado": {
+    "accuracy": 0.5699067909454061,
+    "precision": 0.5818505338078291,
+    "recall": 0.7879518072289157,
+    "f1_score": 0.6693961105424769,
+    "matriz_confusion": {
+      "verdaderos_negativos": 101,
+      "falsos_positivos": 235,
+      "falsos_negativos": 88,
+      "verdaderos_positivos": 327,
+      "total": 751
+    },
+    "falsos_negativos": {
+      "cantidad": 88,
+      "positivos_reales": 415,
+      "proporcion_porcentual": 21.204819277108435
+    }
+  },
+  "referencia_random_forest_test": {
+    "accuracy": 0.4207723035952064,
+    "precision": 0.4777777777777778,
+    "recall": 0.5180722891566265,
+    "f1_score": 0.49710982658959535,
+    "matriz_confusion": {
+      "verdaderos_negativos": 101,
+      "falsos_positivos": 235,
+      "falsos_negativos": 200,
+      "verdaderos_positivos": 215
+    }
+  },
+  "verificaciones_metodologicas": {
+    "ausencia_fuga_caracteristicas": true,
+    "columnas_excluidas_predictoras": [
+      "riesgo",
+      "numero_vulnerabilidades",
+      "paquete",
+      "version"
+    ],
+    "declaracion_independencia_test": "verificado_en_etapa3",
+    "detalle_independencia": "En esta Etapa 3 las particiones se regeneraron estrictamente por grupos de paquetes a partir de dataset_ml.csv. Los 11 paquetes evaluados en test.csv no tienen ninguna version en train ni en validation (solapamiento = 0). El modelo fue seleccionado exclusivamente mediante la comparacion en validation.csv sin consultar test.csv.",
+    "solapamiento_paquetes": 0
+  }
+}

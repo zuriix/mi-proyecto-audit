@@ -1,0 +1,42 @@
+{
+  "fecha_ejecucion": "2026-10-15T03:00:13Z",
+  "etapa": "Etapa 3 - Cierre Tecnico",
+  "componente": "Integracion Modelo ML + npm audit",
+  "interprete_python": "Python 3.10",
+  "node_version": "v24.14.0",
+  "npm_version": "11.9.0",
+  "npm_path": "C:\\Program Files\\nodejs\\npm.cmd",
+  "artefacto_modelo_cargado": "models/random_forest.pkl",
+  "algoritmo_modelo": "LogisticRegression",
+  "prueba_paquete_real": {
+    "paquete": "minimist",
+    "version": "1.2.5",
+    "clasificacion_ml": "SIN RIESGO DETECTADO",
+    "probabilidad_riesgo_ml": 48.9,
+    "auditoria_npm": "completado",
+    "vulnerabilidades_detectadas": {
+      "total": 1,
+      "criticas": 1,
+      "altas": 0,
+      "moderadas": 0,
+      "bajas": 0
+    },
+    "resultado_general": "RIESGO",
+    "mensaje": "npm audit reportó vulnerabilidades conocidas."
+  },
+  "prueba_manejo_errores": {
+    "paquete": "paquete_ficticio_no_existente_xyz_123",
+    "version": "1.0.0",
+    "tipo_error_capturado": "urllib.error.HTTPError (HTTP Error 404: Not Found)",
+    "comportamiento": "Excepcion gestionada de forma controlada sin interpretarse como paquete seguro ni bloquear la aplicacion"
+  },
+  "verificaciones_integracion": {
+    "modelo_cargado_exitosamente": true,
+    "orden_caracteristicas_correcto": true,
+    "prediccion_ml_sin_errores": true,
+    "ejecucion_npm_audit_flujo_existente": true,
+    "resultados_diferenciados": true,
+    "consulta_fallida_no_interpreta_seguro": true,
+    "prediccion_ml_no_afirma_vulnerabilidad_confirmada": true
+  }
+}

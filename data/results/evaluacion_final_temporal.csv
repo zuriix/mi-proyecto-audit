@@ -1,0 +1,2 @@
+modelo,accuracy,precision,recall,f1_score
+Arbol de Decision,0.6918604651162791,0.68,0.8673469387755102,0.7623318385650224

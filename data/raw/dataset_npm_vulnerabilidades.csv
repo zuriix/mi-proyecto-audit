@@ -1,0 +1,11 @@
+paquete,version_actual,fecha_creacion,ultima_actualizacion,numero_versiones,numero_dependencias,numero_dependencias_opcionales,numero_scripts,repositorio,licencia,numero_vulnerabilidades
+lodash,4.18.1,2012-04-23T16:37:11.912Z,2026-08-12T16:17:06.407Z,117,0,0,1,git+https://github.com/lodash/lodash.git,MIT,0
+express,5.2.1,2010-12-29T19:38:25.450Z,2026-07-14T18:49:18.499Z,288,28,0,6,git+https://github.com/expressjs/express.git,MIT,0
+axios,1.19.0,2014-08-29T23:08:36.810Z,2026-07-29T17:07:55.179Z,143,4,0,21,git+https://github.com/axios/axios.git,MIT,0
+react,19.2.8,2011-10-26T17:46:21.942Z,2026-08-12T16:36:17.538Z,2908,0,0,0,git+https://github.com/react/react.git,MIT,0
+moment,2.30.1,2011-10-17T20:04:22.876Z,2026-08-12T00:53:34.413Z,76,0,0,8,git+https://github.com/moment/moment.git,MIT,0
+chalk,6.0.0,2013-08-03T00:21:56.318Z,2026-07-26T14:51:07.471Z,44,0,0,2,git+https://github.com/chalk/chalk.git,MIT,0
+commander,15.0.0,2011-08-14T22:17:51.639Z,2026-05-29T09:16:23.183Z,124,0,0,11,git+https://github.com/tj/commander.js.git,MIT,0
+uuid,14.0.1,2011-03-31T08:12:51.801Z,2026-06-20T11:56:02.792Z,54,0,0,29,git+https://github.com/uuidjs/uuid.git,MIT,0
+jsonwebtoken,9.0.3,2013-07-01T01:48:05.300Z,2026-07-08T12:39:21.992Z,82,10,0,3,git+https://github.com/auth0/node-jsonwebtoken.git,MIT,0
+mongoose,9.9.2,2010-12-20T09:15:41.703Z,2026-08-10T20:03:07.005Z,1011,7,0,44,git://github.com/Automattic/mongoose.git,MIT,0
