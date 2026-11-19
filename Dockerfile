@@ -19,4 +19,4 @@ COPY . .
 EXPOSE 10000
 
 # CMD usando la variable PORT de Render
-CMD ["sh", "-c", "gunicorn app:app --bind 0.0.0.0:${PORT:-10000} --timeout 120 --access-logfile -"]
+CMD ["python", "-m", "gunicorn", "app:app", "--bind", "0.0.0.0:10000", "--timeout", "120", "--access-logfile", "-"]
